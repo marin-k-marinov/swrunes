@@ -1924,7 +1924,7 @@ function displayMonsterBuild(gridRunes, gridMons, newTabName, monster, buildId) 
 			gridRunes.data().each( function (d) {
 				if(d.monster == monsterId ) {
 					d.monster = 0;
-					d.monster_n = "-";
+					d.monster_n = "Inventory";
 				}
 				if(jQuery.inArray( d.id, runes ) >= 0) {
 					d.monster = monsterId;
