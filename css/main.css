@@ -1,0 +1,816 @@
+.container,.navbar-static-top .container,.navbar-fixed-top .container,.navbar-fixed-bottom .container {
+	/*width: 1204px;*/
+}
+
+html.lte-ie8 input {
+	height: 24px;
+	line-height: 24px;
+	max-height: none;
+	min-height: 24px;
+	vertical-align: middle;
+	padding-top: 0;
+	padding-bottom: 0;
+} 
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+	padding: 0;
+	margin: 0;
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by its height */
+	margin: 0 auto -60px;
+}
+/* Set the fixed height of the footer here */
+#footer {
+	height: 60px;
+}
+.container {
+	padding: 9px 0 69px;
+	/* Pad bottom by footer height */
+}
+#footer .container {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+H1 {
+	font-size: 28px;
+}
+
+H2 {
+	font-size: 22px;
+}
+
+H3 {
+	font-size: 16px;
+}
+
+H4 {
+	font-size: 14px;
+}
+
+H5 {
+	font-size: 12px;
+}
+
+H6 {
+	font-size: 11px;
+}
+
+ovf-hidden {
+	overflow: hidden;
+}
+
+.radio, .checkbox {
+    line-height: 22px;
+}
+
+input[type="radio"] {
+    margin-top: 0;
+}
+
+#flag {
+	background: url('../img/flag.png') repeat-x 0 0 transparent;
+	height: 12px;
+	width: 100%;
+	position: fixed;
+	z-index: 200;
+}
+
+#header {
+	background: url('../img/header_right_bgr.png') no-repeat top right #f9f9f9;
+	height: 100px;
+}
+
+#header H1 {
+	font-size: 22px;
+	margin-top: 80px;
+	text-align: center;
+	color: #1A4085;
+	width: 439px;
+	padding-left: 100px;
+	padding-right: 100px;
+	float: left;
+}
+
+#main {
+	overflow: hidden;
+}
+
+.navbar, .breadcrumb, .accordion {
+	margin-bottom: 10px;
+}
+
+#messaging {
+	clear: right;
+	float: right;
+	margin-right: 10px;
+	margin-top: 30px;
+	width: 250px;
+	text-align: left;
+}
+
+#breadcrumb {
+	height: 30px;
+	padding-left: 10px;
+}
+
+#main-nav .navbar-inner {
+	box-shadow: none;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.navbar-inner {
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar UL LI {
+	position: relative;
+}
+
+.navbar .brand,.nav>li>a,.navbar .nav>li>a {
+	text-shadow: none;
+}
+
+.navbar .nav>li>a .caret {
+	vertical-align: middle;
+}
+
+.page-title-bar {
+	overflow: hidden;
+}
+
+.page-title-bar a.back-btn {
+    margin-right: 12px;
+    width: 20px;
+}
+.page-title-bar a.back-btn:hover {
+    text-decoration: none;
+}
+
+.page-title-bar a.back-btn i {
+    font-size: 24px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-size: 14px;
+}
+
+/*------------------ LEFT NAV AFFIX --------------------------*/
+#left .affix {
+	top: 18px;
+	width: 184px;
+}
+
+ @media (max-width: 767px) {
+     #left .affix {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 1220px) {
+     #left .affix {
+        position:static;
+        width: auto;
+     }
+ }
+ 
+html.lte-ie8 #left .affix {
+   position:static;
+   width: auto;
+}
+
+
+/*------------------ BREADCRUMBS --------------------------*/
+.breadcrumb li:after {
+	content: "/";
+	padding: 0 10px;
+}
+
+.breadcrumb li.active:after {
+	display: none;
+}
+
+/*------------------ TABLES --------------------------*/
+.table TH {
+	text-align: center;
+	background-color: #eee;
+}
+
+.table .category {
+	font-weight: bold;
+	background-color: #eff;
+}
+
+.table .subcategory {
+	font-weight: bold;
+	background-color: #f0f3f8;
+	padding-left: 30px;
+}
+
+.table .subcategory2 {
+	padding-left: 60px;
+}
+
+th.disabled,th.disabled:hover,td.disabled,td.disabled:hover {
+	background-color: #cccccc !important;
+}
+
+.table-bordered {
+	border-collapse: collapse;
+}
+
+/*------------------ ACCORDION COLLAPSABLE ICONS --------------------------*/
+
+.accordion .accordion-toggle:before {
+    color: #333;
+    content: "\f077";
+    font-family: FontAwesome;
+    font-style: normal;
+}
+
+.accordion-toggle.collapsed:before  {
+	color: #333;
+    content: "\f078";
+    font-family: FontAwesome;
+    font-style: normal;
+}
+
+/*------------------ FORMS --------------------------*/
+
+.select2-container, select, textarea, 
+input[type="text"], input[type="password"], 
+input[type="datetime"], input[type="datetime-local"], 
+input[type="date"], input[type="month"], 
+input[type="time"], input[type="week"], input[type="number"], 
+input[type="email"], input[type="url"], input[type="search"], 
+input[type="tel"], input[type="color"], .uneditable-input,
+.input-append, .input-prepend {
+	margin-bottom: 0;
+}
+
+
+.form-horizontal .control-group {
+	margin-bottom: 5px;
+}
+
+.datepicker {
+	padding: 0;
+}
+
+.select2-container .select2-choice {
+	height: 24px;
+    line-height: 24px;
+    padding: 0 0 0 6px;
+}
+
+.select2-container .select2-choice div b {
+    background-position: 0 0;
+}
+
+.form-inline div.select2-container,
+.form-inline input {
+	margin-right: 20px;
+}
+
+.form-inline input[type="radio"] {
+	margin-right: 0;
+}
+
+.datepicker {
+	z-index: 1000 !important;
+}
+
+/* ------ ACTION CONTROLS ----------- */
+
+.msl-vertical-actions .btn {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/* ----------------- MODAL DIALOGS -------------------------*/
+.modal {
+	width: 1030px;
+	margin-left: -515px;
+}
+
+.modal.fade.in {
+    top: 5%;
+}
+
+.modal-body {
+	max-height: 550px; 
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 12px;
+}
+
+.modal form {
+	margin-bottom: 0px !important;
+}
+
+.modal .horizontal-controls .control-label {
+	width: 120px;
+	float: left;
+	text-align: right;
+}
+
+.modal .horizontal-controls .controls,.modal .horizontal-controls .controls-text {
+	margin-left: 130px;
+}
+
+.controls-text {
+	margin-top: 5px;
+}
+
+.modal-body .controls INPUT,.modal-body .controls SELECT,.modal-body .controls .input-append,.modal-body .controls .input-prepend {
+	margin-bottom: 0px;
+}
+
+.modal .accordion {
+    margin-bottom: 0;
+}
+
+.modal .accordion-group {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.modal-body .section {
+	padding: 10px 0;
+}
+
+
+/* ----------------- ICONS -------------------------*/
+
+[class^="icon-"], [class*=" icon-"] {
+	margin-top: 1px;
+}
+
+/* ----------------- BUTTONS -------------------------*/
+.btn {
+	padding: 4px 10px;
+}
+
+.btn-small,
+.btn-group > .btn-small {
+	padding: 2px 6px;
+	font-size: 11px;
+}
+
+
+.btn-group-vertical > .btn:first-child {
+    border-radius: 2px 2px 0 0;
+    	-webkit-border-radius: 2px 2px 0 0;
+		-moz-border-radius: 2px 2px 0 0;
+}
+
+.btn-group-vertical > .btn:last-child {
+    border-radius: 0 0 2px 2px;
+    	-webkit-border-radius: 0 0 2px 2px;
+		-moz-border-radius: 0 0 2px 2px;
+}
+
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+	margin-left: 0;
+	margin-right: 6px;
+	vertical-align: text-bottom;
+}
+
+.btn.btn-small [class^="icon-"], .btn.btn-small[class*=" icon-"] {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.btn.showdetails {
+	margin-right: 8px;
+	margin-bottom: 3px;
+}
+
+
+/* ----------------- LABELS & BADGES ------------------ */
+
+.label, .badge {
+	padding: 1px 4px 3px;
+	font-size: 10px;
+	line-height: 13px;
+	vertical-align: middle;
+}
+.label {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+
+/*--------- CUSTOM COMPONENTS --------- */
+
+/*-------------CUSTOM COLLAPSABLE SECTION ----- */
+fieldset,fieldset.collapsible {
+	border-top: 1px solid #D5D8D8;
+	margin-bottom: 10px;
+}
+
+fieldset>legend,fieldset.collapsible>legend {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 60px;
+	margin-bottom: 0px;
+	border-bottom: none;
+	padding: 0 10px;
+	width: auto;
+}
+
+fieldset.collapsible>legend {
+	cursor: pointer
+}
+
+fieldset.collapsible>div {
+	display: none;
+}
+
+/* ---------- MUSALA FILTERS --------*/
+.msl-filters .btn-group,.msl-filters .control-group {
+	margin-bottom: 5px;
+}
+
+.msl-filters label {
+	float: left;
+	padding-top: 7px;
+	margin-right: 5px;
+	width: 80px;
+}
+
+.msl-filters .select2-container,.msl-filters .input-append,.msl-filters .input-prepend {
+	margin-bottom: 0px;
+}
+
+.span3.msl-filters input {
+	width: 165px;
+}
+
+.span3.msl-filters .select2-container {
+	width: 180px;
+}
+
+.span3.msl-filters .datepicker input {
+	width: 80px;
+}
+
+.span6.msl-filters input,.span6.msl-filters .select2-container {
+	width: 465px;
+}
+
+.msl-filters SELECT,.msl-filters INPUT {
+	margin-bottom: 0;
+}
+
+.msl-filters .checkbox {
+	width: auto;
+}
+
+/*------------- MUSALA COMMENTS ----- */
+.comment {
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.comment .comment-info {
+	margin-left: 10px;
+	color: #666 !important;
+	font-style: italic;
+}
+
+/* ---------- MUSALA BLOCKS --------*/
+.msl-block-container {
+	overflow: hidden;
+}
+
+.msl-block {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px border-radius:    4px;
+	background-color: #f7f7f9;
+	padding: 10px;
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+
+.msl-block .title {
+	border-bottom: 1px solid #3a87ad;
+	color: #3a87ad;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.msl-block .details {
+	text-align: center;
+	margin: 10px;
+}
+
+.msl-block-warning {
+	background-color: #fcf8e3;
+}
+
+.msl-block-info {
+	background-color: #d9edf7;
+}
+
+.msl-block-success {
+	background-color: #51a351;
+}
+
+/* ---------- MUSALA NOTIFICATION ICONS --------*/
+.msl-background-error {
+	background-color: #f27b7b;
+}
+
+.msl-background-warning {
+	background-color: #f89406;
+}
+
+.msl-background-info {
+	background-color: #7bd3f3;
+}
+
+.msl-background-success {
+	background-color: #468847;
+}
+
+/* --------------- FORM SECTIONS ---------------*/
+.no-border {
+	border: 0px !important;
+}
+
+.section .section-title .section-action {
+	float: right;
+	margin-left: 10px;
+}
+
+.section .subsection-colored {
+	background-color: #f0f3f8;
+}
+
+.section .control-group,
+/* .section .table, */
+.accordion-inner .control-group,
+.modal .section .t-data-grid {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.input-append input, 
+.input-prepend input, 
+.input-append select, 
+.input-prepend select, 
+.input-append .uneditable-input, 
+.input-prepend .uneditable-input {	
+	border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+	padding-right: 34px;
+}
+
+.input-append .add-on {
+    margin-left: -28px;
+    position: relative;
+    z-index: 100;
+}
+
+.input-append .add-on a {
+    color: #333;
+}
+
+.input-append .add-on a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.input-append .add-on + .add-on {
+    margin-left: -1px;
+}
+
+/* input append with two buttons */
+.input-append.double-append input, 
+.input-append.double-append .uneditable-input, 
+.input-append.double-append select {
+	padding-right: 60px;
+}
+.input-append.double-append .add-on {
+	margin-left: -55px;
+}
+.input-append.double-append .add-on + .add-on {
+	margin-left: -1px;
+}
+
+.input-append, .input-prepend {
+    width: 100%;
+}
+
+.control-group .controls TEXTAREA {
+	height: 45px;
+}
+
+.control-group .controls TEXTAREA.textarea-large {
+	height: 90px;
+}
+
+.control-group .controls TEXTAREA.textarea-xlarge {
+	height: 160px;
+}
+
+.lp-identifier {
+	clear: both;
+	overflow: hidden;
+}
+
+.lp-identifier .input-append,.lp-identifier SELECT {
+	float: left;
+	margin-right: 10px;
+}
+
+.section .table TH {
+	background-color: #f0f3f8;
+	text-align: left;
+}
+
+.section .table TD {
+	background-color: #ffffff;
+}
+
+.section .table .table-actions {
+	width: 1%;
+}
+
+.section input[type="file"] {
+	width: 100%;
+	border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+	background-color: #ffffff;
+  	border: 1px solid #cccccc;
+}
+
+
+/* --------------- OVERRIDEN BOOTSTRAP ---------------*/
+.dropdown-menu>li>a {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.ts-radio, .ts-checkbox {
+    line-height: 23px;
+    padding-left: 5px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+.ts-radio.inline,.ts-checkbox.inline {
+	display: inline-block;
+	padding-top: 0;
+	margin-bottom: 0;
+}
+
+.popover {
+	max-width: 500px;
+}
+
+/* --------------- OVERRIDEN TAPESTRY ---------------*/
+
+HTML>BODY DIV.t-error LI {
+	margin-left: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+.nomargin {
+	margin: 0;
+}
+
+div.t-data-grid table.t-data-grid {
+	clear: both;
+}
+
+.t-data-grid .row-bold {
+	font-weight: bold;
+}
+
+.tapestry-zone DIV.t-data-grid-pager {
+	float: right;
+	margin-top: 10px;
+}
+
+td span.label {
+	margin-right: 5px;
+}
+
+DIV.t-data-grid table.t-data-grid tr {
+	background-color: #fff;
+}
+
+.section table.t-data-grid TD {
+	max-width: 600px;
+}
+
+#content div.t-data-grid {
+	margin-top: 10px;
+}
+
+div.t-data-grid div.t-data-grid-pager span, div.t-data-grid div.t-data-grid-pager a {
+	margin: 0;
+}
+
+div.t-error {
+	background-color: #F2DEDE;
+	border-color: #B94A48 !important;
+	border-radius: 3px 3px 3px 3px;
+	margin-bottom: 10px;
+}
+
+div.t-error .t-banner {
+	background-color: #F2DEDE !important;
+	color: #B94A48 !important;
+	padding: 5px !important;
+}
+
+div.t-error UL {
+	background-color: #F2DEDE !important;
+	color: #B94A48 !important;
+}
+
+.popover-error {
+	background-color: #F2DEDE;
+}
+
+.popover-error .arrow:after {
+	border-bottom-color: #F2DEDE !important;
+}
+
+.popover-error .popover-title {
+	display: none;
+}
+
+.popover-tooltip .popover-title {
+	display: none;
+}
+
+.popover-warn {
+	background-color: #FCF8E3;
+}
+
+.popover-warn .arrow:after {
+	border-bottom-color: #FCF8E3 !important;
+}
+
+.popover-warn .popover-title {
+	display: none;
+}
+
+.control-group.error .select2-container .select2-choice,.control-group.error .select2-container .select2-choices,.control-group.error .select2-container-active .select2-choice,.control-group.error .select2-container-active .select2-choices,.control-group.error .select2-dropdown-open.select2-drop-above .select2-choice,.control-group.error .select2-dropdown-open.select2-drop-above .select2-choices,.control-group.error .select2-container-multi.select2-container-active .select2-choices
+	{
+	border: 1px solid #B94A48 !important;
+}
+
+.control-group.error .select2-container .select2-choice div {
+	border-left: 1px solid #B94A48 !important;
+	background: #F2DEDE !important;
+}
+
+.control-group.warning .select2-container .select2-choice,.control-group.warning .select2-container .select2-choices,.control-group.warning .select2-container-active .select2-choice,.control-group.warning .select2-container-active .select2-choices,.control-group.warning .select2-dropdown-open.select2-drop-above .select2-choice,.control-group.warning .select2-dropdown-open.select2-drop-above .select2-choices,.control-group.warning .select2-container-multi.select2-container-active .select2-choices
+	{
+	border: 1px solid #c09853 !important;
+}
+
+.control-group.warning .select2-container .select2-choice div {
+	border-left: 1px solid #c09853 !important;
+	background: #FCF8E3 !important;
+}
+
+.modal-backdrop {
+	z-index: 990;
+}
+
+.modal {
+	z-index: 1000;
+}
+
+/* --------------- EServices header ---------------*/
+
+.pull-right-almost {
+ 	float: right;
+ 	margin-top:10px; 
+ 	margin-right:10px;
+}

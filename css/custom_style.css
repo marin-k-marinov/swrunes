@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* Sign in form */
+.container .form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin input[type="username"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+/* END Sign in form */
+/* Common elements */
+a{
+	cursor: pointer;
+}
+.alert-ontop{
+	padding: 5px;
+	color: #a94442;
+	background-color: #f2dede;
+	border: 1px solid #ebccd1;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 0px;
+	display: block;
+	margin: -7px 0 0 4px;
+	width: 205px;
+}
+.alerted {
+	border: 1px solid #ebccd1;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.two-elements .alert-ontop{
+	width: 289px;
+}
+.arrowleft {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 13px solid #f2dede;
+	position: absolute;
+	top: 0;
+	left: -13px;
+}
+button {
+	margin: 5px;
+}
+.btn-default, .btn-danger, .btn-primary{
+	float: right;
+}
+
+.bold {
+	font-weight:bold;
+}
+.caret{
+	margin-left: 5px;
+}
+h1{
+	font-size: 150%;
+}
+h2{
+	font-size: 120%;
+}
+h3{
+	font-size: 100%;
+}
+h4{
+	font-size: 90%;
+}
+input[type="radio"], input[type="checkbox"]{
+	float:left;
+	margin: 5px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color:#008dd2;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background: #f8f8f8;
+}
+span.possitive {
+	color: green;
+}
+span.negative {
+	color: red;
+}
+
+/* --> Tables --*/
+
+/*.table /*mainly for tables from datatables.net  {
+	border-collapse: collapse !important;
+	border: 1px solid #555;
+	text-align: center;
+	margin: 0 auto;
+	background: #f7f7f7;
+}*/
+.dataTables_wrapper .dataTables_length {
+	padding: 5px;
+}
+/*.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+	border: 1px solid #555;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	line-height:20px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th{
+	border-color: #555;
+}
+.table > thead > tr:last-child > th , .table > tbody > tr:last-child > th  , .table > tfoot > tr:last-child > th , .table > thead > tr:last-child > td , .table > tbody > tr:last-child > td , .table > tfoot > tr:last-child > td  {
+	border-bottom: 1px solid #555;
+}*/
+
+/* --> common Borders --*/
+.bot-line{
+	border-bottom: 1px solid #333;
+}
+.right-line{
+	border-right: 1px solid #ccc;
+}
+.right-line-dotted{
+	border-right:1px dotted #dadada;
+}
+
+.bot-line2{
+	border-bottom:2px solid #333;	
+}
+.al-left{
+	text-align:left;
+}
+.al-right{
+	text-align:right;
+}
+.bold{
+	font-weight:bold;
+}
+div#Results {
+/*padding: 5px; -- Pre4i na responsive grid*/
+}
+.navbar-form {
+	padding:0;
+	width: 100%;
+}
+.navbar-form .has-feedback .form-control-feedback {
+	top: 21px;
+	left: 189px;
+}
+label {
+	font-weight:normal;
+	color: #666;
+	display:block;
+	margin: 5px;
+}
+select {
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+.navbar-form .radio{
+	margin-top: 10px;
+}
+/*-- END of common element -- */
+/* Page header & body*/
+body {
+	/* Margin bottom by footer height */
+  margin-bottom: 0px;
+  padding-top:10px;
+	font-size:12px;
+}
+.body { /* >>> is replaced by .container */
+	width:980px;
+	margin:0 auto;
+}
+.logo {
+	height:70px;
+	float:left;
+	margin: 0 0 7px 0;
+}
+.page-header {
+	margin: 10px 0 10px;
+	float: none;
+}
+.no-bot-bord {
+	border-bottom: none;
+}
+.no-padding {
+	padding:0;
+}
+.no-margin-top {
+	margin-top:0;
+}
+.nav-tabs {
+	padding-left:10px;
+	padding-top: 5px;
+}
+
+.container {
+	min-height: 450px;
+}
+/
+.panel-body {
+	background: #f8f8f8;
+	border-radius: 3px;
+	padding: 15px 15px 10px 15px;
+}
+.
+.input-group.date {
+	padding: 4px;
+	width: 260px;
+}
+.panel-body .input-group.date input{
+	margin: 0;
+	width: 221px;
+	float: left;
+}
+.input-group-addon {
+	padding: 8px 21px 8px 7px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+	color: #555;
+	text-align: left;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	float: left;
+}
+.panel-body .input-group input{
+	margin:0;
+}
+.panel-body textarea.form-control {
+	margin:4px;
+	width:100%;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	padding:5px;
+}
+/* --> dataTables --*/
+.dataTables_filter input[type="search"] {
+	height: 28px;
+	margin: 3px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+ -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+ transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.dataTables_length select {
+	border-radius:3px;
+}
+/*table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting {
+	padding-right:15px;
+}*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 5px 10px;
+	margin: 8px 0;
+}
+.runeSlot {
+	border-style: solid;
+  border-width: 1px;
+}
+.right {
+    position: absolute;
+    right: 0px;
+ /*   width: 300px;*/
+} 
+.dataTables_scrollBody {
+	overflow-x: hidden !important;
+}
+.collapsed .glyphicon-chevron-up:before {
+	content: "\e114";
+}
