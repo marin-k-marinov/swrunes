@@ -39,6 +39,7 @@
 							
 							<ul class="nav nav-pills" role="tablist" id="myTab">
 								<li><a href="#runes" aria-controls="runes" role="tab" data-toggle="tab">Runes</a></li>
+								<li><a href="#bezhoe" data-toggle="tab">Adv.Runes</a></li>
 								<li><a href="#monsters" data-toggle="tab">Monsters</a></li>
 								<li><a href="#optimizer" data-toggle="tab">Optimizer</a></li>
 								<li class="active"><a href="#export" data-toggle="tab">Export/Import</a></li>
@@ -49,7 +50,80 @@
 
 						<div class="panel-body">	
 							<div class="tab-content" id="myTabContents">
-							
+<!-- ---------------------------------TAB BEZHOE----------------------- -->			
+								<div role="tabpanel" class="tab-pane" id="bezhoe">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="panel panel-default" id="subrune-panel">
+												<div class="panel-heading">All runes - Advanced tab displaying all substats</div>
+												<div class="panel-body">
+								<table id="grid_subrunes" class="table table-bordered table-hover display">
+									<thead>
+										<tr>
+											<th rowspan="2">ID</th>
+											<th rowspan="2">Location</th>
+											<th rowspan="2">Set</th>
+											<th rowspan="2">Slot</th>
+											<th rowspan="2">Grade</th>
+											<th rowspan="2">Level</th>
+											<th colspan="2">Main stat</th>
+											<th colspan="2">Innate stat</th>
+											<th colspan="11" style="text-align:center;">Substats</th>
+										</tr>
+										<tr>
+											<th>Type</th>
+											<th>Value</th>
+											<th>Type</th>
+											<th>Value</th>
+											<th>ATK%</th>
+											<th>ATK</th>
+											<th>DEF%</th>
+											<th>DEF</th>
+											<th>HP%</th>
+											<th>HP</th>
+											<th>SPD</th>
+											<th>ACC</th>
+											<th>RES</th>
+											<th>CRate</th>
+											<th>CDmg</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</tfoot>
+								</table>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div id="rune_time"></div>
+								</div>
+								
 <!-- ---------------------------------TAB RUNES----------------------- -->
 								<div role="tabpanel" class="tab-pane" id="runes">
 								
@@ -81,6 +155,7 @@
 																<option value="Revenge">Revenge</option>
 																<option value="Despair">Despair</option>
 																<option value="Vampire">Vampire</option>
+																<option value="Destroy">Destroy</option>
 															</select>
 														</div>
 														<div class="col-md-1">
@@ -316,6 +391,7 @@
 																<option value="Revenge">Revenge</option>
 																<option value="Despair">Despair</option>
 																<option value="Vampire">Vampire</option>
+																<option value="Destroy">Destroy</option>
 															</select>
 														</div>
 														
@@ -736,6 +812,7 @@
 																<option value="Revenge">Revenge</option>
 																<option value="Despair">Despair</option>
 																<option value="Vampire">Vampire</option>
+																<option value="Destroy">Destroy</option>
 															</select>
 														</div>
 														<div class="col-md-6">
@@ -772,6 +849,7 @@
 																<option value="Revenge">Revenge</option>
 																<option value="Despair">Despair</option>
 																<option value="Vampire">Vampire</option>
+																<option value="Destroy">Destroy</option>
 															</select>
 														</div>
 														<div class="col-md-6">
@@ -810,6 +888,7 @@
 																<option value="Revenge">Revenge</option>
 																<option value="Despair">Despair</option>
 																<option value="Vampire">Vampire</option>
+																<option value="Destroy">Destroy</option>
 															</select>
 														</div>
 														<div class="col-md-6">
@@ -1142,14 +1221,18 @@
 												<div class="panel-heading">Change Log</div>
 												<div class="panel-body" id="monster_panel2">
 													<ul>
-														<li> 12.06.2015 - (v0.7) Filtering results by stat values:
+														<li> 13.10.2015 - (v0.10) Added Advanced Rune Tab displaying all substats with sorting and filtering. All credits to <a href="https://www.reddit.com/user/BeZhoe">BeZhoe</a>
+														</li>
+														<li> 12.09.2015 - (v0.9) Added Destroy rune
+														</li>
+														<li> 12.06.2015 - (v0.8) Filtering results by stat values:
 															<ul>
 																<li>Optimizer: added filtering of the results by min/max values (slows the table redrawing)</li>
 																<li>Build preview: added buttons "Lock runes", "Unlock runes", "Equip runes"</li>
 																<li>Tool: added web counter and donate button</li>
 															</ul>
 														</li>
-														<li> 1.06.2015 - (v0.6) Runes input update:
+														<li> 1.06.2015 - (v0.7) Runes input update:
 															<ul>
 																<li>Runes: added filtering in Runes table</li>
 																<li>Runes: rune main stat value is auto populated based on Grade and Level. Doesn't work with grades 1 and 2. Couldn't find data</li>
@@ -1217,13 +1300,13 @@
 												<div class="panel-heading">Notes for the future</div>
 												<div class="panel-body" id="monster_panel2">
 													<ul>
-														<li> Optimizer Preferences: Add 2-3 fields to choose stats with priority</li><br/>
-														<li> Optimizer Preferences: Add minimum required values</li><br/>
 														<li> Runes create/update: Add validation for impossible runes
 															<br/>(example: Slot 2 with main stat RES)</li><br/>
-														<li> Runes create/update: Add validation for value fields to be numbers only</li><br/>
-														<li> Runes create/update: Add automatical population of main stat based on rune grade and level</li><br/>
 														<li> Runes create/update (OR in Monster preview): Add validation and Notice that the monster has more than 6 runes equipped or more than 1 rune for a slot</li><br/>
+														<li> Optimizer results: Optimize table to be able to display more results without crashing</li><br/>
+														<li> Runes: Integrate the Advanced tabble with substats in the original Runes tab</li><br/>
+														<li> Monsters: When entering a name for new monster, offer an option to autocomplete the stats at 40lvl</li><br/>
+														<li> Hosting: Move to a dedicated server with login, server processing, rune/monster/build bookmarking and sharing</li><br/>
 														
 													</ul>	
 												</div>

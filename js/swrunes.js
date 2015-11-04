@@ -15,7 +15,8 @@ var allSets = {
 "Shield":[2, "", ""], //11
 "Revenge":[2, "", ""], //12
 "Despair":[4, "", ""], //13
-"Vampire":[4, "", ""]}; //14
+"Vampire":[4, "", ""], //14
+"Destroy":[2, "", ""] }; //15
 
 var allStatsMax = {
 "SPD":{ "g1":18, "g2":19, "g3":25, "g4":30, "g5":39, "g6":42},
@@ -34,10 +35,10 @@ var allStatsMax = {
 var allRunesStats = {
 "SPD":{ "g3":[3,4,5,6,8,9,10,12,13,14,16,17,18,19,21,25], "g4":[4,5,7,8,10,11,13,14,16,17,19,20,22,23,25,30], "g5":[5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,39], "g6":[7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,42]},
 "ATK flat":{ "g3":[7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,92], "g4":[10,16,22,28,34,40,46,52,58,64,70,76,82,88,94,112], "g5":[15,22,29,36,43,50,57,64,71,78,85,92,99,106,113,135], "g6":[22,30,38,46,54,62,70,78,86,94,102,110,118,126,134,160]},
-"ATK%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,24,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
-"HP%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,24,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
+"ATK%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,23,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
+"HP%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,23,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
 "HP flat":{ "g3":[100,175,250,325,400,475,550,625,700,775,850,925,1000,1075,1150,1380], "g4":[160,250,340,430,520,610,700,790,880,970,1060,1150,1240,1330,1420,1704], "g5":[270,375,480,585,690,795,900,1005,1110,1215,1320,1425,1530,1635,1740,2088], "g6":[360,480,600,720,840,960,1080,1200,1320,1440,1560,1680,1800,1920,2040,2448]},
-"DEF%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,24,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
+"DEF%":{ "g3":[4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,38], "g4":[5,7,9,11,13,16,18,20,22,23,27,29,31,33,36,43], "g5":[8,10,12,15,17,20,22,24,27,29,32,34,37,40,43,51], "g6":[11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,63]},
 "DEF flat":{ "g3":[7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,92], "g4":[10,16,22,28,34,40,46,52,58,64,70,76,82,88,94,112], "g5":[15,22,29,36,43,50,57,64,71,78,85,92,99,106,113,135], "g6":[22,30,38,46,54,62,70,78,86,94,102,110,118,126,134,160]},
 "CRate":{ "g3":[3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,37], "g4":[4,6,8,11,13,15,17,19,22,24,26,28,30,33,35,41], "g5":[5,7,10,12,15,17,19,22,24,27,29,31,34,36,39,47], "g6":[7,10,13,16,19,22,25,28,31,34,37,40,43,46,49,58]},
 "CDmg":{ "g3":[4,6,9,11,13,16,18,20,22,25,27,29,32,34,36,43], "g4":[6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,57], "g5":[8,11,15,18,21,25,28,31,34,38,41,44,48,51,54,65], "g6":[11,15,19,23,27,31,35,39,43,47,51,55,59,63,67,80]},
@@ -48,12 +49,14 @@ var allRunesStats = {
 
 
 // do not modify thos in the code! Used only for display
-var emptySetCounter = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0};
+var emptySetCounter = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0,"Destroy":0};
 var emptyRune = {"id": "", "monster":"", "monster_n":"", "set":"", "slot":"", "grade":"", "level":"", "m_t":"", "m_v":"", "i_t":"", "i_v":"", "s1_t":"", "s1_v":"", "s2_t":"", "s2_v":"", "s3_t":"", "s3_v":"", "s4_t":"", "s4_v":""};
 var emptyMonster = {"id":"", "name":"", "level":"", "b_hp":"", "b_atk":"", "b_def":"", "b_spd":"", "b_crate":"", "b_cdmg":"", "b_res":"", "b_acc":""};
 
 var focusRuneSlotCount = 7;
 var gridOpt = null;
+var gridRunes = null;
+var gridSubRunes = null;
 var asyncProcess;
 // Structure for objects rune and monster and extended monster
 //rune = {"id": 1, "monster":"", "monster_n":"", "set":"5", "slot":"2", "grade":"2", "level":"12", "m_t":"SPD", "m_v":"13", "i_t":"", "i_v":"", "s1_t":"ATK%", "s1_v":"4", "s2_t":"DEF", "s2_v":"18", "s3_t":"DEF%", "s3_v":"3", "s4_t":"", "s4_v":""}
@@ -188,6 +191,129 @@ function initRunesTable(dataSet) {
 			{ "data": null, "defaultContent": '<a href="#" class="del_row">delete</>'}
 		]
 	}*/
+}
+
+function initSubRunesTable(dataSet) {
+	var data1x = [];
+	if(dataSet !== null && dataSet.length>0)
+	{
+		data1x = dataSet;		
+		for(var j=0;j<data1x.length;j++) {
+			
+			var s1t = data1x[j].s1_t;
+			var s2t = data1x[j].s2_t;
+			var s3t = data1x[j].s3_t;
+			var s4t = data1x[j].s4_t;
+			
+			var s1v = data1x[j].s1_v;
+			var s2v = data1x[j].s2_v;
+			var s3v = data1x[j].s3_v;
+			var s4v = data1x[j].s4_v;
+			
+			//ATK% ATK DEF% DEF HP% HP SPD ACC RES CRate CDmg
+			switch (s1t)
+			{
+				case "ATK%"			: data1x[j].sub_atkp=s1v; break;
+				case "ATK flat"		: data1x[j].sub_atkf=s1v; break;
+				case "DEF%"			: data1x[j].sub_defp=s1v; break;
+				case "DEF flat"		: data1x[j].sub_deff=s1v; break;
+				case "HP%"			: data1x[j].sub_hpp=s1v; break;
+				case "HP flat"		: data1x[j].sub_hpf=s1v; break;
+				case "SPD"			: data1x[j].sub_spd=s1v; break;
+				case "ACC"			: data1x[j].sub_acc=s1v; break;
+				case "RES"			: data1x[j].sub_res=s1v; break;
+				case "CRate"		: data1x[j].sub_crate=s1v; break;
+				case "CDmg"			: data1x[j].sub_cdmg=s1v; break;
+			}
+			switch (s2t)
+			{
+				case "ATK%"			: data1x[j].sub_atkp=s2v; break;
+				case "ATK flat"		: data1x[j].sub_atkf=s2v; break;
+				case "DEF%"			: data1x[j].sub_defp=s2v; break;
+				case "DEF flat"		: data1x[j].sub_deff=s2v; break;
+				case "HP%"			: data1x[j].sub_hpp=s2v; break;
+				case "HP flat"		: data1x[j].sub_hpf=s2v; break;
+				case "SPD"			: data1x[j].sub_spd=s2v; break;
+				case "ACC"			: data1x[j].sub_acc=s2v; break;
+				case "RES"			: data1x[j].sub_res=s2v; break;
+				case "CRate"		: data1x[j].sub_crate=s2v; break;
+				case "CDmg"			: data1x[j].sub_cdmg=s2v; break;
+			}
+			switch (s3t)
+			{
+				case "ATK%"			: data1x[j].sub_atkp=s3v; break;
+				case "ATK flat"		: data1x[j].sub_atkf=s3v; break;
+				case "DEF%"			: data1x[j].sub_defp=s3v; break;
+				case "DEF flat"		: data1x[j].sub_deff=s3v; break;
+				case "HP%"			: data1x[j].sub_hpp=s3v; break;
+				case "HP flat"		: data1x[j].sub_hpf=s3v; break;
+				case "SPD"			: data1x[j].sub_spd=s3v; break;
+				case "ACC"			: data1x[j].sub_acc=s3v; break;
+				case "RES"			: data1x[j].sub_res=s3v; break;
+				case "CRate"		: data1x[j].sub_crate=s3v; break;
+				case "CDmg"			: data1x[j].sub_cdmg=s3v; break;
+			}
+			switch (s4t)
+			{
+				case "ATK%"			: data1x[j].sub_atkp=s4v; break;
+				case "ATK flat"		: data1x[j].sub_atkf=s4v; break;
+				case "DEF%"			: data1x[j].sub_defp=s4v; break;
+				case "DEF flat"		: data1x[j].sub_deff=s4v; break;
+				case "HP%"			: data1x[j].sub_hpp=s4v; break;
+				case "HP flat"		: data1x[j].sub_hpf=s4v; break;
+				case "SPD"			: data1x[j].sub_spd=s4v; break;
+				case "ACC"			: data1x[j].sub_acc=s4v; break;
+				case "RES"			: data1x[j].sub_res=s4v; break;
+				case "CRate"		: data1x[j].sub_crate=s4v; break;
+				case "CDmg"			: data1x[j].sub_cdmg=s4v; break;
+			}
+			if(!data1x[j].sub_atkp){ data1x[j].sub_atkp = "-"; }
+			if(!data1x[j].sub_atkf){ data1x[j].sub_atkf = "-"; }
+			if(!data1x[j].sub_defp){ data1x[j].sub_defp = "-"; }
+			if(!data1x[j].sub_deff){ data1x[j].sub_deff = "-"; }
+			if(!data1x[j].sub_hpp){ data1x[j].sub_hpp = "-"; }
+			if(!data1x[j].sub_hpf){ data1x[j].sub_hpf = "-"; }
+			if(!data1x[j].sub_spd){ data1x[j].sub_spd = "-"; }
+			if(!data1x[j].sub_acc){ data1x[j].sub_acc = "-"; }
+			if(!data1x[j].sub_res){ data1x[j].sub_res = "-"; }
+			if(!data1x[j].sub_crate){ data1x[j].sub_crate = "-"; }
+			if(!data1x[j].sub_cdmg){ data1x[j].sub_cdmg = "-"; }
+		}
+	}	
+	
+	return $('#grid_subrunes').DataTable( {
+		"bDestroy": 		true,
+		"lengthMenu": 	[[10,20,-1], [10,20,"All"]],
+		"data": 				data1x,
+    "order": 				[[ 0, "asc" ]],
+		'bAutoWidth': 	false,
+		"deferRender":  true,
+		"columns": 			[
+			{ "data": "id" },
+			{ "data": "monster_n" },
+			{ "data": "set" },
+			{ "data": "slot" },
+			{ "data": "grade" },
+			{ "data": "level" },
+			{ "data": "m_t" },
+			{ "data": "m_v" },
+			{ "data": "i_t" },
+			{ "data": "i_v" },
+			
+			//ATK% ATK DEF% DEF HP% HP SPD ACC RES CRate CDmg
+			{ "data": "sub_atkp" },
+			{ "data": "sub_atkf" },
+			{ "data": "sub_defp" },
+			{ "data": "sub_deff" },
+			{ "data": "sub_hpp" },
+			{ "data": "sub_hpf" },
+			{ "data": "sub_spd" },
+			{ "data": "sub_acc" },
+			{ "data": "sub_res" },
+			{ "data": "sub_crate" },
+			{ "data": "sub_cdmg" }
+		],
+	});
 }
 
 function initMonstersTable(dataSet) {
@@ -359,6 +485,72 @@ function initOptTable(dataSet) {
 	});
 }
 
+function refreshGridRunesFilters(gridR) {
+    // add filters in Rune table footers
+	gridR.columns().flatten().each( function ( colIdx ) {
+		if(colIdx != 0 && colIdx != 5 && colIdx != 7 && colIdx != 9 && colIdx != 10) {
+			// Create the select list and search operation
+			var oldVal = $( gridR.column(colIdx).footer() ).find("select").val();
+			$( gridR.column(colIdx).footer() ).html("");
+			var select = $('<select />')
+					.appendTo(
+							gridR.column(colIdx).footer()
+					)
+					.on( 'change', function () {
+							gridR
+									.column( colIdx )
+									.search( $(this).val() )
+									.draw();
+					} );
+			select.append( $('<option value=""></option>') );
+			// Get the search data for the first column and add to the select list
+			gridR
+        .column( colIdx )
+        .cache( 'search' )
+        .sort()
+        .unique()
+        .each( function ( d ) {
+					select.append( $('<option value="'+d+'">'+d+'</option>') );
+        } );
+			select.val(oldVal);
+		}
+	});
+}
+
+function refreshGridSubRunesFilters(gridR) {
+    // add filters in Rune table footers
+	gridR.columns().flatten().each( function ( colIdx ) {
+		if(colIdx != 0 && colIdx != 5 && colIdx != 7 && colIdx != 9 && colIdx != 10 && colIdx != 11 && colIdx != 12
+			&& colIdx != 13 && colIdx != 14 && colIdx != 15 && colIdx != 16 && colIdx != 17 && colIdx != 18
+			&& colIdx != 19 && colIdx != 20) {
+			// Create the select list and search operation
+			var oldVal = $( gridR.column(colIdx).footer() ).find("select").val();
+			$( gridR.column(colIdx).footer() ).html("");
+			var select = $('<select />')
+					.appendTo(
+							gridR.column(colIdx).footer()
+					)
+					.on( 'change', function () {
+							gridR
+									.column( colIdx )
+									.search( $(this).val() )
+									.draw();
+					} );
+			select.append( $('<option value=""></option>') );
+			// Get the search data for the first column and add to the select list
+			gridR
+        .column( colIdx )
+        .cache( 'search' )
+        .sort()
+        .unique()
+        .each( function ( d ) {
+					select.append( $('<option value="'+d+'">'+d+'</option>') );
+        } );
+			select.val(oldVal);
+		}
+	});
+}
+
 // get raw row data from a table by id
 function getRowDataById(table, wantedId) {
 	var rowData = null;
@@ -422,11 +614,16 @@ function displayRune(rune) {
 }
 
 // create a rune in table with data from "Rune details" panel
-function createRune(table, lastRuneId) {
+function createRune(table, table2, lastRuneId) {
 	lastRuneId ++;
 	var newRune = {"id": lastRuneId, "monster":Number($("#rune_monster").val()), "monster_n":$( "#rune_monster option:selected" ).text(), "set": $("#rune_set").val(), "slot":Number($("#rune_slot").val()), "grade":Number($("#rune_grade").val()), "level":Number($("#rune_level").val()), "m_t":$("#rune_maintype").val(), "m_v":Number($("#rune_mainvalue").val()), "i_t":$("#rune_innatetype").val(), "i_v":Number($("#rune_innatevalue").val()), "s1_t":$("#rune_stat1type").val(), "s1_v":Number($("#rune_stat1value").val()), "s2_t":$("#rune_stat2type").val(), "s2_v":Number($("#rune_stat2value").val()), "s3_t":$("#rune_stat3type").val(), "s3_v":Number($("#rune_stat3value").val()), "s4_t":$("#rune_stat4type").val(), "s4_v":Number($("#rune_stat4value").val()), "locked":0};
 	
 	table.row.add( newRune ).draw();
+	var runes = [];
+	table.data().each( function (d) {
+    runes.push(d);
+	});
+	table2 = initSubRunesTable(runes);
 	return lastRuneId;
 }
 
@@ -901,7 +1098,7 @@ function calculateActualAndMax(monster) {
 
 // determines rune set bonuses and adds them into rune bonus stats
 function determineCompleteSetsAndEffects(monster, runes){
-	var setCounter = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0};
+	var setCounter = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0,"Destroy":0};
 	for(i=0; i<runes.length; i++) {
 		setCounter[runes[i].set]++;
 	}
@@ -1328,7 +1525,7 @@ function getPossiblePermutations(setsForAllSlots, requestedSetTypes) {
 	}
 	// if different sets are selected, advanced logic
 	else {
-		var equippedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0};
+		var equippedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0,"Destroy":0};
 		var numberOfEquippedRequestedSetSlots = 0;
 		var addedCounter = [false,false,false,false,false,false];
 		
@@ -1448,7 +1645,7 @@ function optimize(gridRunes, gridMons, focusSelected) {
 		}
 	}
 	// validate requested sets
-	var requestedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0};
+	var requestedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0,"Destroy":0};
 	if( $("#opt_set1").val() != "")
 		requestedSetTypes[$("#opt_set1").val()] += allSets[$("#opt_set1").val()][0];
 	if( $("#opt_set2").val() != "")
@@ -1570,7 +1767,7 @@ function optimize(gridRunes, gridMons, focusSelected) {
 		var i5 = 0;
 		var iterations = 0;
 		
-		var equippedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0};
+		var equippedSetTypes = {"Energy": 0,"Fatal":0,"Blade":0,"Rage":0,"Swift":0,"Focus":0,"Guard":0,"Endure":0,"Violent":0,"Will":0,"Nemesis":0,"Shield":0,"Revenge":0,"Despair":0,"Vampire":0,"Destroy":0};
 		var numberOfEquippedRequestedSetSlots = 0;
 		var addedCounter = [false,false,false,false,false,false];
 		var lastProcessed = [-1,-1,-1,-1,-1,-1];
@@ -1934,6 +2131,8 @@ function displayMonsterBuild(gridRunes, gridMons, newTabName, monster, buildId) 
 			gridRunes.rows().invalidate().draw();
 			var dataString = exportData(gridRunes, gridMons);
 			localStorage.setItem(localDataName, dataString);
+			refreshGridRunesFilters(gridRunes);
+			refreshGridSubRunesFilters(gridSubRunes);
 		}
 	});
 	
@@ -1952,6 +2151,7 @@ $(document).ready(function(){
 	$('#savedBuilds').val(JSON.stringify(savedBuilds));
 
 	var gridRunes = initRunesTable([]);
+	var gridSubRunes = initSubRunesTable([]);
 	var gridMons = initMonstersTable([]);
 	//var gridOpt1 = initOpt1Table([]);
 	//var gridOpt2 = initOpt2Table([]);
@@ -1965,6 +2165,7 @@ $(document).ready(function(){
 		allData.runes = fixImportRunes(allData.runes);
 		
 		gridRunes = initRunesTable(allData.runes);
+		gridSubRunes = initSubRunesTable(allData.runes);
 		gridMons = initMonstersTable(allData.mons);
 		nextRuneId = findMaxId(allData.runes);
 		nextMonsId = findMaxId(allData.mons);
@@ -2111,9 +2312,11 @@ $(document).ready(function(){
 			alert("Set type, slot, level, grade and main stat are required.");
 			return false;
 		}
-		nextRuneId = createRune(gridRunes,nextRuneId);
+		nextRuneId = createRune(gridRunes,gridSubRunes,nextRuneId);
 		var dataString = exportData(gridRunes, gridMons);
-	  localStorage.setItem(localDataName, dataString);
+		localStorage.setItem(localDataName, dataString);
+		refreshGridRunesFilters(gridRunes);
+		refreshGridSubRunesFilters(gridSubRunes);
 		alert("Rune created.");
 	});
 	
@@ -2125,8 +2328,11 @@ $(document).ready(function(){
 			return false;
 		}
 		updateRune(gridRunes);
+		updateRune(gridSubRunes);
 		var dataString = exportData(gridRunes, gridMons);
-	  localStorage.setItem(localDataName, dataString);
+	    localStorage.setItem(localDataName, dataString);
+	    refreshGridRunesFilters(gridRunes);
+			refreshGridSubRunesFilters(gridSubRunes);
 	});
 	
 	// button Clear rune fields
@@ -2205,7 +2411,7 @@ $(document).ready(function(){
 		replaceMonstersInSelect("rune_monster", gridMons, true);
 		replaceMonstersInSelect("opt_monster", gridMons, true);
 		var dataString = exportData(gridRunes, gridMons);
-	  localStorage.setItem(localDataName, dataString);
+	    localStorage.setItem(localDataName, dataString);
 		alert("Monster created.");
 	});
 	
@@ -2220,7 +2426,7 @@ $(document).ready(function(){
 		replaceMonstersInSelect("rune_monster", gridMons, true);
 		replaceMonstersInSelect("opt_monster", gridMons, true);
 		var dataString = exportData(gridRunes, gridMons);
-	  localStorage.setItem(localDataName, dataString);
+        localStorage.setItem(localDataName, dataString);
 	});
 	
 	// button Clear monster fields
@@ -2247,6 +2453,7 @@ $(document).ready(function(){
 		allData.runes = fixImportRunes(allData.runes);
 		
 		gridRunes = initRunesTable(allData.runes);
+		gridSubRunes = initSubRunesTable(allData.runes);
 		gridMons = initMonstersTable(allData.mons);
 		nextRuneId = findMaxId(allData.runes);
 		nextMonsId = findMaxId(allData.mons);
@@ -2265,6 +2472,8 @@ $(document).ready(function(){
 		
 		replaceMonstersInSelect("rune_monster", gridMons, true);
 		replaceMonstersInSelect("opt_monster", gridMons, true);
+		refreshGridRunesFilters(gridRunes);
+		refreshGridSubRunesFilters(gridSubRunes);
 	});
 	
 	
@@ -2367,31 +2576,7 @@ $(document).ready(function(){
 		gridOpt.draw();
 	});
 	
-	// add filters in Rune table footers
-	gridRunes.columns().flatten().each( function ( colIdx ) {
-		if(colIdx != 0 && colIdx != 5 && colIdx != 7 && colIdx != 9 && colIdx != 10) {
-    // Create the select list and search operation
-    var select = $('<select />')
-        .appendTo(
-            gridRunes.column(colIdx).footer()
-        )
-        .on( 'change', function () {
-            gridRunes
-                .column( colIdx )
-                .search( $(this).val() )
-                .draw();
-        } );
-		select.append( $('<option value=""></option>') );
-    // Get the search data for the first column and add to the select list
-    gridRunes
-        .column( colIdx )
-        .cache( 'search' )
-        .sort()
-        .unique()
-        .each( function ( d ) {
-					select.append( $('<option value="'+d+'">'+d+'</option>') );
-        } );
-		}
-	});
+	refreshGridRunesFilters(gridRunes);
+	refreshGridSubRunesFilters(gridSubRunes);
 
 });
