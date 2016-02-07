@@ -292,3 +292,7 @@ body {
 .collapsed .glyphicon-chevron-up:before {
 	content: "\e114";
 }
+
+#grid_opt > tbody > tr:first-child > td{
+    background-color: #DFFB8E;
+}
