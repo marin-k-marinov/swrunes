@@ -84,7 +84,7 @@ class Wrapper
 		} 
 		catch(PDOException $e) { 
 			throw new Exception('Unable to connect to Database! Error message: '.$e->getMessage());
-			//die ('Unable to connect to Database! Error message: '.$e->getMessage());
+			//die ('Unable to connect to Database! Error message: '.$Ex->getMessage());
 		}
 	}
     return $this->db;
@@ -116,7 +116,7 @@ class Wrapper
 				$rowCount = $rowCount + $count;
 			}
 			catch(PDOException $e) { 
-				//$e->getMessage();
+				//$Ex->getMessage();
 				return $rowCount;
 			}	
 			$i = $i + $i1;
@@ -135,7 +135,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//$e->getMessage();
+			//$Ex->getMessage();
 		}	
 		return array();
 	}
@@ -156,7 +156,7 @@ class Wrapper
 			return $statm->rowCount();
 		}
 		catch(PDOException $e) { 
-			//$e->getMessage();
+			//$Ex->getMessage();
     	}
 		return 0;
 	}
@@ -178,7 +178,7 @@ class Wrapper
 			return $statm->rowCount();
 		}
 		catch(PDOException $e) { 
-			//$e->getMessage();
+			//$Ex->getMessage();
     	}
 		return 0;
 	}
@@ -325,7 +325,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -342,7 +342,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -362,7 +362,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -381,7 +381,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -428,7 +428,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -480,7 +480,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -496,7 +496,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
@@ -512,7 +512,7 @@ class Wrapper
 			return $statm->fetchAll();
 		}
 		catch(PDOException $e) { 
-			//echo $e->getMessage();
+			//echo $Ex->getMessage();
     	}
 		return array();
 	}
